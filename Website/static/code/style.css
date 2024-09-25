@@ -1,0 +1,201 @@
+:root{
+    --Primary: #1c1c1c;
+    --Secondary: #2e2e2e;
+    --Highlight: #13eb0c;
+    --Highlight2: #ff3232;
+    --Title: #fff;
+    --Description: #979797;
+    --Font-Secondary: MS UI Gothic,windows font,nec_apc3,Tahoma; 
+    --FontPrimary: "VCR OSD Mono", Arial;
+    --BorderRad: 6px;
+}
+@font-face {
+    font-family: "VCR OSD Mono";
+    src: url(/Website/static/Assets/VCR_OSD_MONO_1.001.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Windows Font";
+    src: url(/Website/static/Assets/MS-UIGothic.ttf) format("truetype");
+}
+
+body{
+    background: var(--Primary);
+}
+#bodyCenter{
+    width: 90%;
+    margin: auto;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--Secondary);
+    border-bottom: 5px solid var(--Highlight);
+}
+.printDurationContainer{
+    width: 100%;
+    padding: 5px;
+    background-color: var(--Secondary);
+    border-radius: var(--BorderRad);
+}
+.printName{
+    display: inline-flex;
+    font-family: var(--Font-Secondary);
+    color: var(--Title);
+    max-width: 50%;
+    text-overflow:ellipsis;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+.timeleft{
+    display: inline-flex;
+    font-family: var(--Font-Secondary);
+    color: var(--Description);
+    font-size: smaller;
+
+
+}
+.progressBarContainer{
+    background: var(--Primary);
+    height: 23px;
+    width: 96%;
+    margin: auto;
+    border-radius: var(--BorderRad);
+}
+.progressBar{
+    background-color: var(--Highlight);
+    height: 100%;
+    z-index: 20;
+    border-radius: var(--BorderRad);
+    font-size: 90%;
+    text-align: center;
+    font-family: var(--Font-Secondary);
+    transition-duration: 500ms;
+}
+button:hover{
+    cursor: pointer;
+}
+.pausePrint{
+    display: inline-flex;
+    float: right;
+    margin-top: 5px;
+    height: 30px;
+    width: 30px;
+    background: none;
+    background-image: url(/Website/static/Assets/pause.svg);
+    border: 2px solid var(--Secondary);
+}
+.stopPrint{
+    margin-top: 5px;
+    display: inline-flex;
+    float: right;
+    height: 30px;
+    width: 30px;
+    background: none;
+    background-image: url(/Website/static/Assets/stop.svg);
+    border: 2px solid var(--Secondary);
+}
+h1,h2, h3{
+    color: var(--Title);
+    font-family: var(--FontPrimary);
+}
+p{
+    color: var(--Description);
+    font-family: var(--Font-Secondary);
+}
+#printerName{
+    margin-bottom: 0px;
+}
+#onlineStatus{
+    margin-top: 5px;
+    font-family: var(--FontPrimary);
+}
+#videoFrameContainer{
+    width: 100%;
+    padding: 5px;
+    border-radius: var(--BorderRad);
+    background-color: var(--Secondary);
+    margin-bottom: 15px;
+    aspect-ratio: 16 / 9;
+}
+#controlContainer{
+    margin-top: 15px;
+}
+.control{
+    background: var(--Secondary);
+    width: 100%;
+    margin: auto;
+    margin-top: 15px;
+    padding: 5px;
+    border-radius: var(--BorderRad);
+}
+.controlTitle{
+    display: inline-block;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+.controlIcon{
+    display: inline-block;
+}
+.tempControl{
+    width: 45%;
+    display: inline-block;
+}
+.tempUp{
+    width: 100%;
+    height: 2em;
+    border-top-left-radius: var(--BorderRad);
+    border-top-right-radius: var(--BorderRad);
+    border: none;
+    margin-bottom: 0px;
+    background: var(--Primary) url(/Website/static/Assets/uparrow.svg) no-repeat;
+    background-position: 50%;
+}
+.tempLabel{
+    color: var(--Title);
+    text-align: center;
+    width: 100%;
+    height: 2em;
+    padding: 0px;
+    border: none;
+    margin-top: -3px;
+    margin-bottom: -2px;
+    background-color: var(--Primary);
+}
+.tempDown{
+    width: 100%;
+    height: 2em;
+    border-bottom-left-radius: var(--BorderRad);
+    border-bottom-right-radius: var(--BorderRad);
+    border: none;
+    margin-bottom: 0px;
+    background: var(--Primary) url(/Website/static/Assets/downarrow.svg) no-repeat;
+    background-position: 50%;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+.tempLabels{
+    width: 45%;
+    text-align: center;
+    display: inline-block;
+}
+.tempLabels h3{
+    margin-bottom: 0px;
+}
+.tempLabels h4{
+    color: var(--Title);
+    display: inline-block;
+    font-family: var(--Font-Secondary);
+    margin-top: 0px;
+}
+.tempLabels p {
+    display: inline-block;
+    margin-top: 5px;
+}
+.contCont{
+    margin: auto;
+    width: 60%;
+}

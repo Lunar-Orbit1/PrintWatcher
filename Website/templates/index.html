@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="/Website/static/code/style.css">
+    </head>
+    <body>
+        <header id="head" style="display: none;">
+            <div class="printDurationContainer">
+                <h2 class="printName">FileName.gcode</h3> 
+                <p class="timeleft">00:00 / 00:00</p>
+                <button class="stopPrint"> </button>
+                <button class="pausePrint"> </button>
+                <div class="progressBarContainer">
+                    <div class="progressBar" style="width: 25%;">25%</div>
+                </div>
+            </div>
+        </header>
+        <div id="bodyCenter">
+            <h1 id="printerName">Printer Name</h1>
+            <p id="onlineStatus" style="color: var(--Highlight2);">Offline</p>
+            <div id="videoFrameContainer">
+
+            </div>
+            <div class="printDurationContainer">
+                <h2 class="printName">FileName.gcode</h3> 
+                <p class="timeleft">00:00 / 00:00</p>
+                <button class="stopPrint"> </button>
+                <button class="pausePrint"> </button>
+                <div class="progressBarContainer">
+                    <div class="progressBar" style="width: 25%;">25%</div>
+                </div>
+            </div>
+            <div id="controlContainer">
+                <div class="control">
+                    <img class="controlIcon" src="/Website/static/Assets/temp.svg">
+                    <h3 class="controlTitle">Temperature</h3> <br>
+                    <div class="tempLabels">
+                        <h3>Nozzle</h3>
+                        <h4>200C</h4><p>/200c</p>
+                    </div>
+                    <div class="tempLabels">
+                        <h3>Bed</h3>
+                        <div class="tempCircle">
+                            <h4>60C</h4><p>/60c</p>
+                        </div>
+                    </div>
+                    <div class="contCont">
+                        <div class="tempControl">
+                            <button class="tempUp"></button>
+                            <input class="tempLabel" placeholder="0">
+                            <button class="tempDown"></button>
+                        </div>
+                        <div class="tempControl">
+                            <button class="tempUp"></button>
+                            <input class="tempLabel" placeholder="0">
+                            <button class="tempDown"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="control">
+                    <img class="controlIcon" src="/Website/static/Assets/temp.svg">
+                    <h3 class="controlTitle">Fan Speed</h3> <br>
+                    <div class="tempControl">
+                        <button class="tempUp"></button>
+                        <input class="tempLabel" placeholder="0">
+                        <button class="tempDown"></button>
+                    </div>
+                </div>
+                <div class="control">
+                    <img class="controlIcon" src="/Website/static/Assets/temp.svg">
+                    <h3 class="controlTitle">Fan Speed</h3> <br>
+                    <div class="tempControl">
+                        <button class="tempUp"></button>
+                        <input class="tempLabel" placeholder="0">
+                        <button class="tempDown"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
