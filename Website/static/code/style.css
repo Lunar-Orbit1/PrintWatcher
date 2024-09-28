@@ -24,6 +24,7 @@ body{
 #bodyCenter{
     width: 90%;
     margin: auto;
+    margin-top: 6em;
 }
 header{
     position: fixed;
@@ -112,7 +113,7 @@ p{
     margin-top: 5px;
     font-family: var(--FontPrimary);
 }
-#videoFrameContainer{
+#videoFrameContainer, #documentPreview{
     width: 100%;
     padding: 5px;
     border-radius: var(--BorderRad);
@@ -120,8 +121,9 @@ p{
     margin-bottom: 15px;
     aspect-ratio: 16 / 9;
 }
-#controlContainer{
+#controlContainer, #documentPreview{
     margin-top: 15px;
+    aspect-ratio: 16 / 9;
 }
 .control{
     background: var(--Secondary);
@@ -178,24 +180,48 @@ textarea:focus, input:focus{
     outline: none;
 }
 .tempLabels{
-    width: 45%;
-    text-align: center;
+    aspect-ratio: 1 / 1;
+    width: 10em;
+    border-radius: 360px;
+    padding: 10px;
     display: inline-block;
+    background: conic-gradient(var(--Highlight) 0% 100%, var(--Secondary) 0% 100%);
+    transition-duration: 300ms;
 }
-.tempLabels h3{
+.tempCircle{
+    background-color: var(--Secondary);
+    aspect-ratio: 1 / 1;
+    width: calc(100% - 20px);
+    border-radius: 360px;
+    padding: 10px;
+    text-align: center;
+}
+.tempCircle h3{
+    margin-top: 0px;
     margin-bottom: 0px;
 }
-.tempLabels h4{
-    color: var(--Title);
-    display: inline-block;
-    font-family: var(--Font-Secondary);
-    margin-top: 0px;
+.tempLabels .tempUp, .tempLabels .tempDown, .tempLabels .tempLabel{
+    width: 7em;
 }
-.tempLabels p {
-    display: inline-block;
-    margin-top: 5px;
+.tempLabels .tempUp {
+    margin-top: 15%;
 }
-.contCont{
+.tempLabelContainers{
+    width: 5.8em;
     margin: auto;
-    width: 60%;
+    margin-top: -3px;
+    margin-bottom: -3px;
+    background: var(--Primary);
+}
+.tempLabelContainers input, .tempLabelContainers p, .tempLabelContainers h3 {
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: var(--Font-Secondary);
+}
+.tempLabelContainers input{
+    width: 2em;
+    background: none;
+    border: none;
+    color: var(--Description);
 }
